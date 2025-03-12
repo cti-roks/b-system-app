@@ -1,0 +1,7 @@
+{
+  "name": "b-system-app",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  }
+}
