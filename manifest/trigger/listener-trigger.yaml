@@ -1,0 +1,8 @@
+apiVersion: triggers.tekton.dev/v1beta1
+kind: EventListener
+metadata:
+  name: b-system-trigger
+spec:
+  serviceAccountName: pipeline
+  triggers:
+    - triggerRef: b-system-trigger-app
