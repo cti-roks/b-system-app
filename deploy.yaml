@@ -18,7 +18,7 @@ spec:
           imagePullPolicy: Always
           ports:
             - name: http
-              containerPort: 8080
+              containerPort: 8083
               protocol: TCP
       imagePullSecrets:
         - name: all-icr-io
@@ -29,10 +29,10 @@ metadata:
   name: b-system-app #service name
 spec:
   ports:
-    - name: http-8080 #port name
-      port: 8080
+    - name: http-8083 #port name
+      port: 8083
       protocol: TCP
-      targetPort: 8080
+      targetPort: 8083
   selector:
     app: b-system-app #deployment label
 ---
@@ -47,4 +47,4 @@ spec:
   tls:
     termination: edge
   port:
-    targetPort: http-8080 #port name
+    targetPort: http-8083 #port name
